@@ -3,51 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asesoría Pensional Colombia</title>
+  <title>Asesoría Jurídica y Pensional Colombia</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="main-container">
-    <!-- HERO / ENCABEZADO EN MORADO Y AMARILLO -->
+    <!-- ENCABEZADO / HERO -->
     <header class="hero">
-      <div class="hero-top-badge pulse-badge">ASESORÍA PENSIONAL EN COLOMBIA</div>
-      <h1 class="fade-in-down">¿Tiene dudas con su pensión?</h1>
-      <p class="fade-in-up">Le ayudamos a revisar sus semanas, corregir inconsistencias y asegurar su retiro de forma clara y rápida.</p>
+      <div class="hero-top-badge pulse-badge">ASESORÍA JURÍDICA Y PENSIONAL</div>
+      <h1 class="fade-in-down">Planifica hoy la pensión que quieres mañana</h1>
+      <p class="fade-in-up">Atención legal especializada <strong>dentro de Colombia y en el exterior</strong> 🇨🇴🌎</p>
     </header>
 
-    <!-- 1. SERVICIOS -->
+    <!-- BENEFICIOS / ¿POR QUÉ PLANIFICAR? -->
     <section class="section">
-      <h2 class="section-title reveal">¿En qué le ayudamos?</h2>
+      <div class="why-box reveal">
+        <h3>¿Por qué planificar tu pensión con nosotros?</h3>
+        <ul class="why-list">
+          <li>Conocer tu historial de cotizaciones.</li>
+          <li>Revisar tus semanas y aportes.</li>
+          <li>Identificar posibles inconsistencias.</li>
+          <li>Conocer las alternativas en los distintos regímenes.</li>
+          <li>Prepararte con anticipación para tu jubilación.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICIOS CON SUBMENÚS DESPLEGABLES -->
+    <section class="section">
+      <h2 class="section-title reveal">Nuestros Servicios Jurídicos</h2>
+      <p class="section-subtitle">Toca cualquier servicio para ver las opciones de consulta:</p>
       
-      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Revisión de semanas cotizadas')">
-        <div class="service-icon-wrapper float-icon">📊</div>
-        <div class="service-content">
-          <h3>Semanas y Cotizaciones</h3>
-          <p>Revisamos que todas sus semanas trabajadas estén completas y registradas.</p>
+      <!-- SERVICIO 1 -->
+      <div class="service-accordion reveal">
+        <div class="accordion-header ripple" onclick="toggleAccordion(this)">
+          <div class="service-icon-wrapper">👥</div>
+          <div class="service-header-text">
+            <h3>Asesoría Jurídica y Pensional</h3>
+            <p>Orientación legal sobre tu situación y alternativas en los regímenes dentro o fuera del país.</p>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="submenu-item ripple" onclick="openWhatsApp('Asesoría Jurídica - Diagnóstico en Colombia')">
+            <span>📋 Diagnóstico pensional en Colombia</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+          <div class="submenu-item ripple" onclick="openWhatsApp('Asesoría Jurídica - Colombianos en el Exterior')">
+            <span>🌎 Asesoría para Colombianos en el Exterior</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+          <div class="submenu-item ripple" onclick="openWhatsApp('Asesoría Jurídica - Comparativa de Regímenes Pensionales')">
+            <span>⚖️ Evaluación y derecho pensional en Regímenes</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
         </div>
       </div>
 
-      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Corrección de inconsistencias')">
-        <div class="service-icon-wrapper float-icon">⚠️</div>
-        <div class="service-content">
-          <h3>Inconsistencias y Vacíos</h3>
-          <p>Recuperamos empleadores antiguos o periodos no reportados.</p>
+      <!-- SERVICIO 2 -->
+      <div class="service-accordion reveal">
+        <div class="accordion-header ripple" onclick="toggleAccordion(this)">
+          <div class="service-icon-wrapper">🔍</div>
+          <div class="service-header-text">
+            <h3>Revisión de Historia Laboral</h3>
+            <p>Verificación legal de semanas y períodos registrados en los regímenes.</p>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="submenu-item ripple" onclick="openWhatsApp('Historia Laboral - Conteo de Semanas')">
+            <span>📊 Conteo y verificación de semanas</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+          <div class="submenu-item ripple" onclick="openWhatsApp('Historia Laboral - Inconsistencias o vacíos')">
+            <span>⚠️ Corrección de vacíos y empleadores faltantes</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
         </div>
       </div>
 
-      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Traslado de régimen')">
-        <div class="service-icon-wrapper float-icon">🔄</div>
-        <div class="service-content">
-          <h3>Traslados de Régimen</h3>
-          <p>Analizamos si le conviene estar en Colpensiones o Fondo Privado.</p>
+      <!-- SERVICIO 3 -->
+      <div class="service-accordion reveal">
+        <div class="accordion-header ripple" onclick="toggleAccordion(this)">
+          <div class="service-icon-wrapper">👤</div>
+          <div class="service-header-text">
+            <h3>Orientación Personalizada</h3>
+            <p>Analizamos tu caso y explicamos tus opciones según los regímenes pensionales.</p>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="submenu-item ripple" onclick="openWhatsApp('Orientación - Traslado de Regímenes Pensionales')">
+            <span>🔄 Evaluación para Traslado de Regímenes Pensionales</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+          <div class="submenu-item ripple" onclick="openWhatsApp('Orientación - Edades y Tiempos')">
+            <span>⏳ Requisitos de edad y tiempo cotizado</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICIO 4 -->
+      <div class="service-accordion reveal">
+        <div class="accordion-header ripple" onclick="toggleAccordion(this)">
+          <div class="service-icon-wrapper">📈</div>
+          <div class="service-header-text">
+            <h3>Proyección Pensional</h3>
+            <p>Información estratégica para planificar tu futuro en los diferentes regímenes.</p>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="submenu-item ripple" onclick="openWhatsApp('Proyección Pensional - Cálculo de mesada')">
+            <span>💰 Proyección de mesada pensional</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
+          <div class="submenu-item ripple" onclick="openWhatsApp('Proyección Pensional - Planificación de aportes')">
+            <span>🎯 Estrategia de aportes futuros</span>
+            <small>Consultar vía WhatsApp →</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. ENTIDADES CON LAS QUE TRABAJAS -->
+    <!-- ENTIDADES -->
     <section class="section">
-      <h2 class="section-title reveal">Revisamos su caso en:</h2>
+      <h2 class="section-title reveal">Revisión de casos en:</h2>
       <div class="entities-grid">
         <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre Colpensiones')">Colpensiones</div>
         <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre UGPP')">UGPP</div>
@@ -56,33 +139,33 @@
       </div>
     </section>
 
-    <!-- 3. BLOQUE DE CONVERSIÓN DE ASESORES (FINAL) -->
+    <!-- BLOQUE FINAL CON ASESORES Y ATENCIÓN EXTERIOR -->
     <section class="section">
-      <div class="whatsapp-box reveal scale-in">
-        <h2>¡Hable hoy con un asesor!</h2>
-        <p>Elija la opción para abrir WhatsApp directamente:</p>
+      <div class="whatsapp-box reveal">
+        <h2>¡Agenda tu Asesoría Jurídica!</h2>
+        <p>Atendemos consultas locales e internacionales por WhatsApp.</p>
         
-        <a href="https://wa.me/573000000000?text=Hola,%20deseo%20asesor%C3%ADa%20pensional%20con%20la%20Asesora%20Sandra" class="btn-wa ripple">
-          <span class="wa-icon bounce-icon">💬</span>
+        <a href="https://wa.me/573000000000?text=Hola,%20deseo%20asesor%C3%ADa%20jur%C3%ADdica%20y%20pensional%20con%20la%20Asesora%20Sandra" class="btn-wa ripple">
+          <span class="wa-icon">💬</span>
           <div class="btn-text">
             <strong>Asesora Sandra</strong>
-            <small>Especialista en Colpensiones</small>
+            <small>Especialista en Regímenes Pensionales y Exterior</small>
           </div>
         </a>
 
-        <a href="https://wa.me/573000000001?text=Hola,%20deseo%20asesor%C3%ADa%20pensional%20con%20el%20Asesor%20Carlos" class="btn-wa ripple">
-          <span class="wa-icon bounce-icon">💬</span>
+        <a href="https://wa.me/573000000001?text=Hola,%20deseo%20asesor%C3%ADa%20jur%C3%ADdica%20y%20pensional%20con%20el%20Asesor%20Carlos" class="btn-wa ripple">
+          <span class="wa-icon">💬</span>
           <div class="btn-text">
             <strong>Asesor Carlos</strong>
             <small>Especialista en Fondos Privados</small>
           </div>
         </a>
 
-        <a href="https://wa.me/573000000002?text=Hola,%20quisiera%20informaci%C3%B3n%20general%20de%20servicios" class="btn-wa btn-wa-main ripple">
-          <span class="wa-icon bounce-icon">📱</span>
+        <a href="https://wa.me/573000000002?text=Hola,%20quisiera%20informaci%C3%B3n%20de%20asesor%C3%ADa%20jur%C3%ADdica%20y%20pensional" class="btn-wa btn-wa-main ripple">
+          <span class="wa-icon">📱</span>
           <div class="btn-text">
             <strong>Línea Principal WhatsApp</strong>
-            <small>Atención inmediata</small>
+            <small>Atención en Colombia e Internacional</small>
           </div>
         </a>
       </div>
@@ -91,7 +174,7 @@
 
   <!-- BOTÓN FLOTANTE INFERIOR -->
   <div class="sticky-bar">
-    <a href="https://wa.me/573000000002?text=Hola,%20necesito%20asesor%C3%ADa%20pensional" class="btn-sticky ripple">
+    <a href="https://wa.me/573000000002?text=Hola,%20necesito%20asesor%C3%ADa%20jur%C3%ADdica%20y%20pensional" class="btn-sticky ripple">
       <span>💬</span> CONSULTAR POR WHATSAPP AHORA
     </a>
   </div>

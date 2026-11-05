@@ -1,16 +1,36 @@
-// Redirección directa a WhatsApp según el tema o servicio seleccionado
+// Abrir WhatsApp con mensaje específico
 function openWhatsApp(serviceName) {
-  const phoneNumber = "573000000002"; // Reemplaza con tu número principal de WhatsApp
-  const message = `Hola, quisiera información y asesoría sobre: ${serviceName}`;
+  const phoneNumber = "573000000002"; // Reemplazar por tu número real de WhatsApp
+  const message = `Hola, quisiera información y asesoría jurídica sobre: ${serviceName}`;
   const encodedMessage = encodeURIComponent(message);
   
   window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. EFECTO RIPPLE (Onda de agua al dar clic o tap)
-  const ripples = document.querySelectorAll(".ripple");
+// LÓGICA DE SUBMENÚ DESPLEGABLE (ACORDEÓN)
+function toggleAccordion(headerElement) {
+  const accordion = headerElement.parentElement;
+  const content = accordion.querySelector(".accordion-content");
+  
+  document.querySelectorAll(".service-accordion").forEach((item) => {
+    if (item !== accordion) {
+      item.classList.remove("open");
+      item.querySelector(".accordion-content").style.maxHeight = null;
+    }
+  });
 
+  if (accordion.classList.contains("open")) {
+    accordion.classList.remove("open");
+    content.style.maxHeight = null;
+  } else {
+    accordion.classList.add("open");
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // EFECTO RIPPLE
+  const ripples = document.querySelectorAll(".ripple");
   ripples.forEach((element) => {
     element.addEventListener("click", function (e) {
       const circle = document.createElement("span");
@@ -32,9 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2. ANIMACIÓN REVEAL (Entrada suave de tarjetas al scroll)
+  // ANIMACIÓN REVEAL SCROLL
   const reveals = document.querySelectorAll(".reveal");
-
   function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const elementVisible = 20;
@@ -47,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Ejecutar al cargar inmediatamente y al hacer scroll
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 });
