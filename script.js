@@ -1,13 +1,13 @@
-// Abrir WhatsApp con mensaje específico
+// La función openWhatsApp usa los números configurados directamente en los enlaces del HTML
 function openWhatsApp(serviceName) {
-  const phoneNumber = "573000000002"; // Reemplazar con el número real de WhatsApp
+  const defaultNumber = "573143278808"; // Línea principal por defecto
   const message = `Hola, quisiera información y asesoría jurídica sobre: ${serviceName}`;
   const encodedMessage = encodeURIComponent(message);
   
-  window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  window.location.href = `https://wa.me/${defaultNumber}?text=${encodedMessage}`;
 }
 
-// LÓGICA DE SUBMENÚ DESPLEGABLE (ACORDEÓN CON AJUSTE DINÁMICO DE ALTURA)
+// LÓGICA DE SUBMENÚ DESPLEGABLE (ACORDEÓN)
 function toggleAccordion(headerElement) {
   const accordion = headerElement.parentElement;
   const content = accordion.querySelector(".accordion-content");
@@ -29,7 +29,7 @@ function toggleAccordion(headerElement) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // EFECTO RIPPLE AL TOCAR BOTONES O OPCIONES
+  // EFECTO RIPPLE AL TOCAR
   const ripples = document.querySelectorAll(".ripple");
   ripples.forEach((element) => {
     element.addEventListener("click", function (e) {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ANIMACIÓN REVEAL AL HACER SCROLL
+  // ANIMACIÓN REVEAL SCROLL
   const reveals = document.querySelectorAll(".reveal");
   function revealOnScroll() {
     const windowHeight = window.innerHeight;
