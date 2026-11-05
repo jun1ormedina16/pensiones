@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesoría Pensional Colombia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <!-- HERO / ENCABEZADO EN MORADO Y AMARILLO -->
+    <header class="hero">
+      <div class="hero-top-badge pulse-badge">ASESORÍA PENSIONAL EN COLOMBIA</div>
+      <h1 class="fade-in-down">¿Tiene dudas con su pensión?</h1>
+      <p class="fade-in-up">Le ayudamos a revisar sus semanas, corregir inconsistencias y asegurar su retiro de forma clara y rápida.</p>
+    </header>
+
+    <!-- 1. SERVICIOS -->
+    <section class="section">
+      <h2 class="section-title reveal">¿En qué le ayudamos?</h2>
+      
+      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Revisión de semanas cotizadas')">
+        <div class="service-icon-wrapper float-icon">📊</div>
+        <div class="service-content">
+          <h3>Semanas y Cotizaciones</h3>
+          <p>Revisamos que todas sus semanas trabajadas estén completas y registradas.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Corrección de inconsistencias')">
+        <div class="service-icon-wrapper float-icon">⚠️</div>
+        <div class="service-content">
+          <h3>Inconsistencias y Vacíos</h3>
+          <p>Recuperamos empleadores antiguos o periodos no reportados.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal tilt-card ripple" onclick="openWhatsApp('Traslado de régimen')">
+        <div class="service-icon-wrapper float-icon">🔄</div>
+        <div class="service-content">
+          <h3>Traslados de Régimen</h3>
+          <p>Analizamos si le conviene estar en Colpensiones o Fondo Privado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ENTIDADES CON LAS QUE TRABAJAS -->
+    <section class="section">
+      <h2 class="section-title reveal">Revisamos su caso en:</h2>
+      <div class="entities-grid">
+        <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre Colpensiones')">Colpensiones</div>
+        <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre UGPP')">UGPP</div>
+        <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre Fondos Privados')">Fondos Privados</div>
+        <div class="entity-badge reveal ripple" onclick="openWhatsApp('Consulta sobre Fuerzas Militares')">Fuerzas Militares</div>
+      </div>
+    </section>
+
+    <!-- 3. BLOQUE DE CONVERSIÓN DE ASESORES (FINAL) -->
+    <section class="section">
+      <div class="whatsapp-box reveal scale-in">
+        <h2>¡Hable hoy con un asesor!</h2>
+        <p>Elija la opción para abrir WhatsApp directamente:</p>
+        
+        <a href="https://wa.me/573000000000?text=Hola,%20deseo%20asesor%C3%ADa%20pensional%20con%20la%20Asesora%20Sandra" class="btn-wa ripple">
+          <span class="wa-icon bounce-icon">💬</span>
+          <div class="btn-text">
+            <strong>Asesora Sandra</strong>
+            <small>Especialista en Colpensiones</small>
+          </div>
+        </a>
+
+        <a href="https://wa.me/573000000001?text=Hola,%20deseo%20asesor%C3%ADa%20pensional%20con%20el%20Asesor%20Carlos" class="btn-wa ripple">
+          <span class="wa-icon bounce-icon">💬</span>
+          <div class="btn-text">
+            <strong>Asesor Carlos</strong>
+            <small>Especialista en Fondos Privados</small>
+          </div>
+        </a>
+
+        <a href="https://wa.me/573000000002?text=Hola,%20quisiera%20informaci%C3%B3n%20general%20de%20servicios" class="btn-wa btn-wa-main ripple">
+          <span class="wa-icon bounce-icon">📱</span>
+          <div class="btn-text">
+            <strong>Línea Principal WhatsApp</strong>
+            <small>Atención inmediata</small>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- BOTÓN FLOTANTE INFERIOR -->
+  <div class="sticky-bar">
+    <a href="https://wa.me/573000000002?text=Hola,%20necesito%20asesor%C3%ADa%20pensional" class="btn-sticky ripple">
+      <span>💬</span> CONSULTAR POR WHATSAPP AHORA
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
